@@ -6,8 +6,10 @@
 	})
 
 	$("#remove").click (function(){
-	$("#seconds").remove();
+		$("#seconds").remove(); //reset //empty
+		
 	})
+
 
 	var hoursPass= function () {
 	var hours = Math.floor(seconds/120);
@@ -19,10 +21,11 @@
 
 		$("#timerdown").text(hours+ ": "+ minutes) //hours+ ": "+ minutes;
 	}else {
-		clearInterval(timerdown) //opposit of setInterval, it will not update
-		$("#timerdown").text= "Time is up";
+
+		//clearInterval(timerdown) //opposit of setInterval, it will not update
+		$("#timerdown").text("Time is up");
 	}	
-	//
+	
 	if (hours<12){
 		return "0"+hours;
 	}else {
